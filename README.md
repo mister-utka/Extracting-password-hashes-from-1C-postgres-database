@@ -13,25 +13,15 @@ python extract_1c_postgres_data_hash_password_v8users.py --host 192.168.1.2 --po
 |False |Иванов Иван Иванович                          |3c8b9f4b983afa9f644d26e2b34fa3e03a2bef16  |511596acc4e00d2981f968dc6dc7139816fe1d3a  |
 |False |Петров Петр Петрович                          |ae8669f05a725b049378339eb4f72bd8d588f5c4  |e356aad611a43dd53c8d2879c4752ed54497462e  |
 +------+----------------------------------------------+------------------------------------------+------------------------------------------+
-
+```
 
 ## Description
-
 The script connects to PostgreSQL, extracts data from the v8users table (by default),
 decodes the encrypted DATA field (XOR mask), extracts two SHA1 password hashes (regular and uppercase)
 and outputs them to the console in tabular form.
 
 ### Use
-
-Python
-
-python dumper.py --host 192.168.1.2 --port 5432 --user postgres --password postgres --dbname 1C_test
-
-
-## Usage example
-
-Python
-
+```py
 python dumper.py --host 192.168.1.2 --port 5432 --user postgres --password postgres --dbname 1C_test
 +------+----------------------------------------------+------------------------------------------+------------------------------------------+
 |Админ |Имя пользователя                              |SHA1                                      |SHA1_SHIFT                                |
@@ -40,5 +30,4 @@ python dumper.py --host 192.168.1.2 --port 5432 --user postgres --password postg
 |False |Иванов Иван Иванович                          |3c8b9f4b983afa9f644d26e2b34fa3e03a2bef16  |511596acc4e00d2981f968dc6dc7139816fe1d3a  |
 |False |Петров Петр Петрович                          |ae8669f05a725b049378339eb4f72bd8d588f5c4  |e356aad611a43dd53c8d2879c4752ed54497462e  |
 +------+----------------------------------------------+------------------------------------------+------------------------------------------+
-
 ```
