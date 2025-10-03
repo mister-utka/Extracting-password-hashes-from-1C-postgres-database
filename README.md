@@ -16,6 +16,7 @@ python extract_1c_postgres_data_hash_password_v8users.py --host 192.168.1.2 --po
 
 
 ## Description
+
 The script connects to PostgreSQL, extracts data from the v8users table (by default),
 decodes the encrypted DATA field (XOR mask), extracts two SHA1 password hashes (regular and uppercase)
 and outputs them to the console in tabular form.
